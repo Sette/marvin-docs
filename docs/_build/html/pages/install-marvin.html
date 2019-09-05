@@ -1,0 +1,198 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Install Apache Marvin-AI &#8212; Apache Marvin-AI 0.0.5 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to Apache Marvin-AI’s documentation!" href="../index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="install-apache-marvin-ai">
+<h1>Install Apache Marvin-AI<a class="headerlink" href="#install-apache-marvin-ai" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to Apache Marvin-Ai guide Install</p>
+<div class="section" id="ubuntu-install">
+<h2>Ubuntu Install<a class="headerlink" href="#ubuntu-install" title="Permalink to this headline">¶</a></h2>
+<p>Toolbox will need some OS dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install libsasl2-dev python-pip graphviz -y
+</pre></div>
+</div>
+<p>We strongly recommend the use of VirtualEnv and VirtualEnvWrapper:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo pip install --upgrade pip
+$ sudo pip install virtualenvwrapper --ignore-installed six
+</pre></div>
+</div>
+<p>Spark installation (Optional):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.6.tgz -o /tmp/spark-2.1.1-bin-hadoop2.6.tgz
+$ sudo tar -xf /tmp/spark-2.1.1-bin-hadoop2.6.tgz -C /opt/
+$ sudo ln -s /opt/spark-2.1.1-bin-hadoop2.6 /opt/spark
+$ echo &quot;export SPARK_HOME=/opt/spark&quot; &gt;&gt; $HOME/.bash_profile
+</pre></div>
+</div>
+<p>If you do not have /opt directory created, before unpacking spark, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir /opt
+</pre></div>
+</div>
+<p>Marvin uses dafault values for these environment variables, but you can customize them (Optional):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo &quot;export WORKON_HOME=$HOME/.virtualenvs&quot; &gt;&gt; $HOME/.bash_profile
+$ echo &quot;export MARVIN_HOME=$HOME/marvin&quot; &gt;&gt; $HOME/.bash_profile
+$ echo &quot;export MARVIN_DATA_PATH=$HOME/marvin/data&quot; &gt;&gt; $HOME/.bash_profile
+$ echo &quot;source virtualenvwrapper.sh&quot; &gt;&gt; $HOME/.bash_profile
+$ ource ~/.bash_profile
+</pre></div>
+</div>
+<p>Install python-toolbox:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkvirtualenv python-toolbox-env
+$ setvirtualenvproject
+$ pip install marvin-python-toolbox
+</pre></div>
+</div>
+<p>Test the installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin
+</pre></div>
+</div>
+</div>
+<div class="section" id="macos-install">
+<h2>MacOS Install<a class="headerlink" href="#macos-install" title="Permalink to this headline">¶</a></h2>
+<p>Toolbox will need some OS dependencies:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo easy_install pip
+$ brew install openssl graphviz
+</pre></div>
+</div>
+<p>We strongly recommend the use of VirtualEnv and VirtualEnvWrapper:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo pip install --upgrade pip
+$ sudo pip install virtualenvwrapper --ignore-installed six
+</pre></div>
+</div>
+<p>Spark installation (Optional):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.6.tgz -o /tmp/spark-2.1.1-bin-hadoop2.6.tgz
+$ sudo tar -xf /tmp/spark-2.1.1-bin-hadoop2.6.tgz -C /opt/
+$ sudo ln -s /opt/spark-2.1.1-bin-hadoop2.6 /opt/spark
+$ echo &quot;export SPARK_HOME=/opt/spark&quot; &gt;&gt; $HOME/.bash_profile
+</pre></div>
+</div>
+<p>If you do not have /opt directory created, before unpacking spark, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir /opt
+</pre></div>
+</div>
+<p>Marvin uses dafault values for these environment variables, but you can customize them (Optional):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo &quot;export WORKON_HOME=$HOME/.virtualenvs&quot; &gt;&gt; $HOME/.bash_profile
+$ echo &quot;export MARVIN_HOME=$HOME/marvin&quot; &gt;&gt; $HOME/.bash_profile
+$ echo &quot;export MARVIN_DATA_PATH=$HOME/marvin/data&quot; &gt;&gt; $HOME/.bash_profile
+$ echo &quot;source virtualenvwrapper.sh&quot; &gt;&gt; $HOME/.bash_profile
+$ ource ~/.bash_profile
+</pre></div>
+</div>
+<p>Install python-toolbox:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkvirtualenv python-toolbox-env
+$ setvirtualenvproject
+$ pip install marvin-python-toolbox
+</pre></div>
+</div>
+<p>Test the installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Apache Marvin-AI</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install Apache Marvin-AI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ubuntu-install">Ubuntu Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#macos-install">MacOS Install</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to Apache Marvin-AI’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Bruno Sette.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/pages/install-marvin.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
