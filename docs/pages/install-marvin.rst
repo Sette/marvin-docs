@@ -2,7 +2,7 @@
 Install Apache Marvin-AI
 ============================
 
-Welcome to Apache Marvin-Ai guide Install
+Welcome to Apache Marvin-Ai Install guide
 
 Ubuntu Install
 --------------
