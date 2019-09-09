@@ -10,7 +10,7 @@ Ubuntu Install
 
 Toolbox will need some OS dependencies::
 
-    $ sudo apt-get install libsasl2-dev python-pip graphviz sasl2-bin -y
+    $ sudo apt-get install libsasl2-dev python-pip graphviz sasl2-bin python-setuptools -y
 
 We strongly recommend the use of VirtualEnv and VirtualEnvWrapper::
 
