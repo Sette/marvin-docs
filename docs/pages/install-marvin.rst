@@ -36,7 +36,7 @@ Marvin uses dafault values for these environment variables, but you can customiz
     $ echo "export MARVIN_HOME=$HOME/marvin" >> $HOME/.bash_profile
     $ echo "export MARVIN_DATA_PATH=$HOME/marvin/data" >> $HOME/.bash_profile
     $ echo "source virtualenvwrapper.sh" >> $HOME/.bash_profile
-    $ ource ~/.bash_profile
+    $ source ~/.bash_profile
 
 Install python-toolbox::
 
