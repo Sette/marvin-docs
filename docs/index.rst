@@ -10,7 +10,11 @@ Welcome to Apache Marvin-AI's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   pages/overview-marvin
+   pages/main-components
    pages/install-marvin
+   pages/get-started
+   pages/community
 
 
 Indices and tables
