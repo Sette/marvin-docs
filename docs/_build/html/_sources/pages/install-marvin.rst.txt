@@ -92,3 +92,6 @@ Install python-toolbox::
 Test the installation::
 
     $ marvin
+
+Docker Install
+--------------

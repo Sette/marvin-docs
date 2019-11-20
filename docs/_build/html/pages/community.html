@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Get Started" href="get-started.html" /> 
+    <link rel="prev" title="Working in an Existent Engine" href="existing-engine.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -84,12 +84,10 @@
 <li class="toctree-l1"><a class="reference internal" href="overview-marvin.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="main-components.html">Main Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-marvin.html">Install Apache Marvin-AI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="get-started.html">Get Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="create-engine.html">Creating a New Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="existing-engine.html">Working in an Existent Engine</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Community</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#github">GitHub</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#macos-install">MacOS Install</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#github">GitHub</a></li>
 </ul>
 </li>
 </ul>
@@ -164,48 +162,6 @@
 <p>GitHub is a project and code version management system as well as a social networking platform designed for developers. In harmony, Apache Marvin-AI is an effort undergoing Incubation at The Apache Software Foundation (ASF), sponsored by the Incubator.</p>
 <p>Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects.</p>
 <p>Thus, Apache Marvin-AI is a project available on GitHub as open source for collaborative development and can be accessed <a class="reference external" href="https://github.com/apache/incubator-marvin">here</a>.</p>
-<div class="section" id="macos-install">
-<h3>MacOS Install<a class="headerlink" href="#macos-install" title="Permalink to this headline">¶</a></h3>
-<p>Toolbox will need some OS dependencies:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo easy_install pip
-$ brew install openssl graphviz
-</pre></div>
-</div>
-<p>We strongly recommend the use of VirtualEnv and VirtualEnvWrapper:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo pip install --upgrade pip
-$ sudo pip install virtualenvwrapper --ignore-installed six
-</pre></div>
-</div>
-<p>Spark installation (Optional):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.6.tgz -o /tmp/spark-2.1.1-bin-hadoop2.6.tgz
-$ sudo tar -xf /tmp/spark-2.1.1-bin-hadoop2.6.tgz -C /opt/
-$ sudo ln -s /opt/spark-2.1.1-bin-hadoop2.6 /opt/spark
-$ echo &quot;export SPARK_HOME=/opt/spark&quot; &gt;&gt; $HOME/.bash_profile
-</pre></div>
-</div>
-<p>If you do not have /opt directory created, before unpacking spark, run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo mkdir /opt
-</pre></div>
-</div>
-<p>Marvin uses dafault values for these environment variables, but you can customize them (Optional):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo &quot;export WORKON_HOME=$HOME/.virtualenvs&quot; &gt;&gt; $HOME/.bash_profile
-$ echo &quot;export MARVIN_HOME=$HOME/marvin&quot; &gt;&gt; $HOME/.bash_profile
-$ echo &quot;export MARVIN_DATA_PATH=$HOME/marvin/data&quot; &gt;&gt; $HOME/.bash_profile
-$ echo &quot;source virtualenvwrapper.sh&quot; &gt;&gt; $HOME/.bash_profile
-$ source ~/.bash_profile
-</pre></div>
-</div>
-<p>Install python-toolbox:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkvirtualenv python-toolbox-env
-$ setvirtualenvproject
-$ pip install marvin-python-toolbox
-</pre></div>
-</div>
-<p>Test the installation:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 
@@ -218,7 +174,7 @@ $ pip install marvin-python-toolbox
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="get-started.html" class="btn btn-neutral float-left" title="Get Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="existing-engine.html" class="btn btn-neutral float-left" title="Working in an Existent Engine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

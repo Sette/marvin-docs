@@ -27,7 +27,8 @@ Respond the interactive prompt and wait for the engine environment preparation, 
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=p7yiLh2uLlQ" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/p7yiLh2uLlQ" frameborder="0" allowfullscreen></iframe>
+
 
 MacOS Install
 ~~~~~~~~~~~~~~~~~

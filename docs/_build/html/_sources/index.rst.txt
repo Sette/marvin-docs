@@ -13,7 +13,8 @@ Welcome to Apache Marvin-AI's documentation!
    pages/overview-marvin
    pages/main-components
    pages/install-marvin
-   pages/get-started
+   pages/create-engine
+   pages/existing-engine
    pages/community
 
 

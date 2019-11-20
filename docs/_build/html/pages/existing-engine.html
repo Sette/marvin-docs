@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Main Components &mdash; Apache Marvin-AI 0.0.5 documentation</title>
+  <title>Working in an Existent Engine &mdash; Apache Marvin-AI 0.0.5 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Install Apache Marvin-AI" href="install-marvin.html" />
-    <link rel="prev" title="Overview" href="overview-marvin.html" /> 
+    <link rel="next" title="Community" href="community.html" />
+    <link rel="prev" title="Creating a New Engine" href="create-engine.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -83,13 +83,10 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview-marvin.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Main Components</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dasfe">DASFE</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="main-components.html">Main Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-marvin.html">Install Apache Marvin-AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="create-engine.html">Creating a New Engine</a></li>
-<li class="toctree-l1"><a class="reference internal" href="existing-engine.html">Working in an Existent Engine</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working in an Existent Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="community.html">Community</a></li>
 </ul>
 
@@ -136,13 +133,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Main Components</li>
+      <li>Working in an Existent Engine</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/pages/main-components.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/pages/existing-engine.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -155,14 +152,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="main-components">
-<h1>Main Components<a class="headerlink" href="#main-components" title="Permalink to this headline">¶</a></h1>
-<p>Here we will explain the design pattern for Apache Marvin-AI.</p>
-<div class="section" id="dasfe">
-<h2>DASFE<a class="headerlink" href="#dasfe" title="Permalink to this headline">¶</a></h2>
-<p>The DASFE design pattern stands for Data Acquisition, Selection, Feedback and Evaluation. In Marvin, the DASFE pattern is represented by the image below. Each box, which we call an Action, holds code written by the user.</p>
-<img alt="../_images/dasfe.png" src="../_images/dasfe.png" />
+  <div class="section" id="working-in-an-existent-engine">
+<h1>Working in an Existent Engine<a class="headerlink" href="#working-in-an-existent-engine" title="Permalink to this headline">¶</a></h1>
+<p>In this chapter we have some examples of how work with an existing engine.</p>
+<ol class="arabic">
+<li><p>If you don’t have an engine locally, clone one to your local machine</p></li>
+<li><p>On Python Toolbox environment, set VirtualEnv and get to engine’s path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin engine-generateenv /path/to/engine/
+$ workon &lt;engine_name&gt;-env
+</pre></div>
 </div>
+</li>
+<li><p>Test your engine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin
+</pre></div>
+</div>
+</li>
+<li><p>Bring up the notebook and access it from your browser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin notebook
+</pre></div>
+</div>
+</li>
+</ol>
 </div>
 
 
@@ -173,10 +184,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="install-marvin.html" class="btn btn-neutral float-right" title="Install Apache Marvin-AI" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="community.html" class="btn btn-neutral float-right" title="Community" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="overview-marvin.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="create-engine.html" class="btn btn-neutral float-left" title="Creating a New Engine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
