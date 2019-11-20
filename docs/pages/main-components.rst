@@ -1,8 +1,12 @@
+.. _main-components:
+
 ============================
 Main Components
 ============================
 
 Here we will explain the design pattern for Apache Marvin-AI.
+
+.. _dasfe:
 
 DASFE
 --------------
