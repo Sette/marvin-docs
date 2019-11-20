@@ -7,7 +7,7 @@ Welcome to Apache Marvin-AI's documentation!
 ============================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
 
    pages/overview-marvin
