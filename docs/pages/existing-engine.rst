@@ -20,3 +20,25 @@ In this chapter we have some examples of how work with an existing engine.
 4. Bring up the notebook and access it from your browser::
 
     $ marvin notebook
+
+
+Running a example engine
+-----------------------------
+
+1. Clone example engine from repository::
+
+    $ git clone https://github.com/apache/incubator-marvin
+
+2. Generate a new marvin engine environment for Iris species engine::
+
+    $ workon python-toolbox-env
+    $ marvin engine-generateenv ../engines/iris-species-engine/
+
+3. Run the Iris species engine::
+
+    $ workon iris-species-engine-env
+    $ marvin engine-dryrun
+
+For more examples, access here_. 
+
+.. _here: https://github.com/apache/incubator-marvin/tree/develop/public-engines

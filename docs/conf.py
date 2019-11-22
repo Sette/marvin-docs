@@ -20,8 +20,6 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Apache Marvin-AI'
-copyright = '2019, Bruno Sette'
-author = 'Bruno Sette'
 
 # The short X.Y version
 version = ''
@@ -96,6 +94,7 @@ html_static_path = ['_static']
 # 'searchbox.html']``.
 #
 # html_sidebars = {}
+html_show_copyright = False
 
 
 # -- Options for HTMLHelp output ---------------------------------------------
@@ -129,7 +128,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'ApacheMarvin-AI.tex', 'Apache Marvin-AI Documentation',
-     'Bruno Sette', 'manual'),
+     'manual'),
 ]
 
 
@@ -138,8 +137,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'apachemarvin-ai', 'Apache Marvin-AI Documentation',
-     [author], 1)
+    (master_doc, 'apachemarvin-ai', 'Apache Marvin-AI Documentation', 1)
 ]
 
 
@@ -150,7 +148,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'ApacheMarvin-AI', 'Apache Marvin-AI Documentation',
-     author, 'ApacheMarvin-AI', 'One line description of project.',
+     'ApacheMarvin-AI', 'One line description of project.',
      'Miscellaneous'),
 ]
 

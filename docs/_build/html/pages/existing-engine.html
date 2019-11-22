@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Community" href="community.html" />
+    <link rel="next" title="Features" href="features.html" />
     <link rel="prev" title="Creating a New Engine" href="create-engine.html" /> 
 </head>
 
@@ -86,7 +86,12 @@
 <li class="toctree-l1"><a class="reference internal" href="main-components.html">Main Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-marvin.html">Install Apache Marvin-AI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="create-engine.html">Creating a New Engine</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Working in an Existent Engine</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Working in an Existent Engine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#running-a-example-engine">Running a example engine</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="community.html">Community</a></li>
 </ul>
 
@@ -174,6 +179,29 @@ $ workon &lt;engine_name&gt;-env
 </div>
 </li>
 </ol>
+<div class="section" id="running-a-example-engine">
+<h2>Running a example engine<a class="headerlink" href="#running-a-example-engine" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Clone example engine from repository:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/apache/incubator-marvin
+</pre></div>
+</div>
+</li>
+<li><p>Generate a new marvin engine environment for Iris species engine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ workon python-toolbox-env
+$ marvin engine-generateenv ../engines/iris-species-engine/
+</pre></div>
+</div>
+</li>
+<li><p>Run the Iris species engine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ workon iris-species-engine-env
+$ marvin engine-dryrun
+</pre></div>
+</div>
+</li>
+</ol>
+<p>For more examples, access <a class="reference external" href="https://github.com/apache/incubator-marvin/tree/develop/public-engines">here</a>.</p>
+</div>
 </div>
 
 
@@ -184,7 +212,7 @@ $ workon &lt;engine_name&gt;-env
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="community.html" class="btn btn-neutral float-right" title="Community" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="features.html" class="btn btn-neutral float-right" title="Features" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="create-engine.html" class="btn btn-neutral float-left" title="Creating a New Engine" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -196,7 +224,6 @@ $ workon &lt;engine_name&gt;-env
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, Bruno Sette
 
     </p>
   </div>

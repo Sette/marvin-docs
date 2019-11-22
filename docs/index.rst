@@ -15,6 +15,8 @@ Welcome to Apache Marvin-AI's documentation!
    pages/install-marvin
    pages/create-engine
    pages/existing-engine
+   pages/features
+   pages/architecture
    pages/community
 
 
