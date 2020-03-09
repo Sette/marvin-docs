@@ -2,7 +2,7 @@
 Architecture
 ============================
 
-In this chapter we explain the architecture of Apache Marvin-AI. The platform has some specific features, such as:
+In this section, we explain the architecture of Apache Marvin-AI. The platform has some specific features, such as:
 
 1. Language Agnostic capabilities: The platform must be able to support R, Python and Scala algorithms
 2. Parallelism capacities in many different levels (Eg. GPU, Multi-core and Multi-node)
@@ -20,20 +20,20 @@ Quality Attributes
 For Data Scientists:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
- * **Interoperability:** to support different programmer languages 
- * **Usability:** to accelerate and simplify the model creation process
+ * **Interoperability:** To support different programmer languages 
+ * **Usability:** To accelerate and simplify the model creation process
 
 For Administrators:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
- * **Manageability:** to simplify the distributed deploy/management process 
- * **Usability:** to support from tiny to intensive loads
+ * **Manageability:** To simplify the distributed deploy/management process 
+ * **Usability:** To support from tiny to intensive loads
 
 For Marvin Developers:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
- * **Modifiability:** to improve and release new versions constantly 
- * **Maintainability:** to allow all type of programmer (from beginners to experts) to contribute
+ * **Modifiability:** To improve and release new versions constantly 
+ * **Maintainability:** To allow all type of programmers (from beginners to experts) to contribute
 
 
 Architectural Tactics

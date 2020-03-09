@@ -4,7 +4,7 @@
 Creating a New Engine
 ============================
 
-In this chapter we have some examples of how to create and work with an engine.
+In this section are examples of how to create and work with an engine.
 
 1. To create a new engine::
 
@@ -32,10 +32,10 @@ Respond the interactive prompt and wait for the engine environment preparation, 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/p7yiLh2uLlQ" frameborder="0" allowfullscreen></iframe>
 
 
-Creating a Iris Classification example
+Creating a Iris Flower Classification Engine example
 ------------------------------------------
 
-Tutorial for create the Iris Classification example on Marvin without using the ready-made engines.
+Tutorial for creating an example of the Iris flower classification task on Marvin without using the ready-made engines.
 
 Requeriments
 ~~~~~~~~~~~~~~~
@@ -65,7 +65,7 @@ You are now ready to code.
 
 .. role:: red
 
-Note: If the workon command not work, type :red:`source ~/.bash_profile` and try again.
+Note: If the workon command "does" not work, type :red:`source ~/.bash_profile` and try running the command again.
 
 
 Running tests
@@ -90,9 +90,10 @@ The project documentation is written using Jupyter notebooks. You can start the 
 
 The notebook is accessed by the browser using the address :red:`localhost:8888`.
 
-**You need to organize the code into cells so that each corresponds an one action of Design Pattern** :ref:`dasfe` **of Marvin.**
+**You need to organize the code into cells so that each corresponds to one action of  the Marvin-AI Design Pattern DASFE.** :ref:`dasfe`
 
-**Note that at the end of each cell there is a reserved variable named “marvin_”, it will be responsible for creating the artifacts. Also note that you need to import the libraries that will be used in each cell.**
+
+**Note that at the end of each cell there is a reserved variable named “marvin_”, those variables will be responsible for creating the artifacts which will be persisted. Also note that you need to import the libraries that will be used in each corresponding cell.**
 
 First, you need to load the dataset. This cell it’s the *Acquisitor and Cleaner*.
 
@@ -110,7 +111,8 @@ First, you need to load the dataset. This cell it’s the *Acquisitor and Cleane
 
     marvin_initial_dataset = iris
 
-In the next cell occurs the dataset split, preparing for training. This cell it’s the *Training Preparator*.
+In the next cell we split the dataset to prepare for training. This cell it’s the *Training Preparator*.
+
 
 .. code-block:: python
 
@@ -127,7 +129,7 @@ In the next cell occurs the dataset split, preparing for training. This cell it�
 
     marvin_dataset = {'train_X': train_X, 'train_y': train_y, 'test_X': test_X, 'test_y': test_y}
 
-Next is the model training. In this tutorial was used the Support Vector Machine (SVM), but you can use the algorithm of your choice. This phase is the *Trainer*.
+Next is the model training. In this tutorial we used a Support Vector Machine (SVM), but you can use the algorithm of your choice. This phase is the *Trainer*.
 
 .. code-block:: python
 
@@ -139,7 +141,7 @@ Next is the model training. In this tutorial was used the Support Vector Machine
 
     marvin_model = model
 
-The evaluation will now be performed by testing the model prediction. This is the *Metrics Evaluator*.
+Here we evaluate model performance utilizing prediction accuracy. This is the *Metrics Evaluator*.
 
 .. code-block:: python
 
@@ -151,13 +153,13 @@ The evaluation will now be performed by testing the model prediction. This is th
 
     marvin_metrics = metric
 
-The following message does not enter the DASFE Architecture, it serves as Jupyter’s own tests. In this way, it will be in an isolated cell and will not receive any markup.
+The following message does not enter the DASFE Architecture, we use this for tests purposes while coding in the notebook.  Therefore, it will be placed in an isolated cell and will not receive any markup.
 
 .. code-block:: python
 
     input_message = ["12", "34", "10", "23"]
 
-This is where the transformation and reading of the message that will be passed to the predictor. Since the message is already prepared, *input_message* is not modified, receiving itself. This is the *Prediction Preparator*.
+In this cell occurs the reading and transformation of the message which will be further passed to the predictor. In this case, since there is no need to apply any treatment to the input message, the message is already prepared, thus we do not modify variable input_message. This is the *Prediction Preparator*.
 
 .. code-block:: python
 
@@ -171,7 +173,7 @@ The following cell performs the prediction, being the end result. This stage is 
     # Predictor
     final_prediction = marvin_model.predict([input_message])[0] 
 
-Like on the test message, this cell doesn’t enter the DASFE Architecture. This cell is only for checking the result within Jupyter itself.
+Like on the test message, this cell does not enter the DASFE Architecture. This cell is only for checking the result within the notebook itself.
 
 .. code-block:: python
 
@@ -181,36 +183,36 @@ Like on the test message, this cell doesn’t enter the DASFE Architecture. This
 Mark cells on DASFE Architecture
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To make the marks on cells, use a window at the top of the Jupyter code as the image below.
+To apply mark cells, use the drop-down menu at the top of the Jupyter notebook as illustrated below.
 
 .. image:: ../images/dasfe-marvin.png
 
-Once the markup is done, the code should look like this
+Once the markup is done, the code should look like this:
 
 .. image:: ../images/marked.png
 
-If everything is correct, save the changes and quit Jupyter.
+If everything is correct, save the changes and quit Jupyter Notebook.
 
 Running the Dryrun
 ~~~~~~~~~~~~~~~~~~~~
 
 Marvin dryrun is a way to test your code against DASFE standards.
 
-**By default, a String message is sent to dryrun, but because the Iris Classifier message is a list of numbers, you must change it to be compatible. As Iris sends four characteristics, you must change the message to a four-number list.**
+**By default, a String message is sent to dryrun, but because the Iris Classification message should be a list of four numbers (flower characteristics), you must change it to be compatible.**
 
-**That way, access the engine.messages file inside the folder** :red:`../marvin/iris-classification-engine/`
+**In order to do this, access the engine.messages file inside the folder** :red:`../marvin/iris-classification-engine/`
 
-As explained, will find the file with the following *String* message::
+The default message should look like this::
 
     [{
     	"msg1": "Hello from marvin engine!"
     }]
 
-So it’s necessary delete everything and put the following message::
+Delete the original content and input the following message::
 
     [[1,2,3,4]]
 
-Now it’s possible perform the correct dryrun of the code. So at the terminal, type::
+Now it is possible to perform dryrun correctly. At the terminal, type the following command::
 
     $ marvin engine-dryrun
 
@@ -218,7 +220,7 @@ Now it’s possible perform the correct dryrun of the code. So at the terminal, 
 Http Server
 ~~~~~~~~~~~~~~~~
 
-With dryrun without errors, it’s possible generate the project API. Thus, the following command is used::
+After executing dryrun without any error raised, it’s possible to generate the project API. Use the following command::
 
     $ marvin engine-httpserver
 

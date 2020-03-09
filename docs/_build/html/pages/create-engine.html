@@ -86,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="main-components.html">Main Components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install-marvin.html">Install Apache Marvin-AI</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Creating a New Engine</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#creating-a-iris-classification-example">Creating a Iris Classification example</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-iris-flower-classification-engine-example">Creating a Iris Flower Classification Engine example</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#requeriments">Requeriments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#getting-started">Getting started</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-tests">Running tests</a></li>
@@ -168,9 +168,9 @@
             
   <div class="section" id="creating-a-new-engine">
 <span id="create"></span><h1>Creating a New Engine<a class="headerlink" href="#creating-a-new-engine" title="Permalink to this headline">¶</a></h1>
-<p>In this chapter we have some examples of how to create and work with an engine.</p>
+<p>In this section are examples of how to create and work with an engine.</p>
 <ol class="arabic">
-<li><p>To create a new engine:</p>
+<li><p class="first">To create a new engine:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ workon python-toolbox-env
 $ marvin engine-generate
 </pre></div>
@@ -179,28 +179,29 @@ $ marvin engine-generate
 </ol>
 <p>Respond the interactive prompt and wait for the engine environment preparation, and don’t forget to start dev box before if you are using vagrant.</p>
 <ol class="arabic" start="2">
-<li><p>Test the new engine:</p>
+<li><p class="first">Test the new engine:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ workon &lt;new_engine_name&gt;-env
 $ marvin
 </pre></div>
 </div>
 </li>
-<li><p>For more informations:</p>
+<li><p class="first">For more informations:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin --help
 </pre></div>
 </div>
 </li>
-<li><p>Youtube Tutorial</p></li>
+<li><p class="first">Youtube Tutorial</p>
+</li>
 </ol>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p7yiLh2uLlQ" frameborder="0" allowfullscreen></iframe><div class="section" id="creating-a-iris-classification-example">
-<h2>Creating a Iris Classification example<a class="headerlink" href="#creating-a-iris-classification-example" title="Permalink to this headline">¶</a></h2>
-<p>Tutorial for create the Iris Classification example on Marvin without using the ready-made engines.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p7yiLh2uLlQ" frameborder="0" allowfullscreen></iframe><div class="section" id="creating-a-iris-flower-classification-engine-example">
+<h2>Creating a Iris Flower Classification Engine example<a class="headerlink" href="#creating-a-iris-flower-classification-engine-example" title="Permalink to this headline">¶</a></h2>
+<p>Tutorial for creating an example of the Iris flower classification task on Marvin without using the ready-made engines.</p>
 <div class="section" id="requeriments">
 <h3>Requeriments<a class="headerlink" href="#requeriments" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Python 3.7.3</p></li>
-<li><p>Pandas 0.25.0</p></li>
-<li><p>Scikit-learn 0.21.3</p></li>
+<li>Python 3.7.3</li>
+<li>Pandas 0.25.0</li>
+<li>Scikit-learn 0.21.3</li>
 </ul>
 </div>
 <div class="section" id="getting-started">
@@ -213,7 +214,7 @@ $ marvin
 </pre></div>
 </div>
 <p>You are now ready to code.</p>
-<style> .red {color:red} </style><p>Note: If the workon command not work, type <span class="red">source ~/.bash_profile</span> and try again.</p>
+<style> .red {color:red} </style><p>Note: If the workon command “does” not work, type <span class="red">source ~/.bash_profile</span> and try running the command again.</p>
 </div>
 <div class="section" id="running-tests">
 <h3>Running tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h3>
@@ -230,8 +231,8 @@ $ marvin
 </pre></div>
 </div>
 <p>The notebook is accessed by the browser using the address <span class="red">localhost:8888</span>.</p>
-<p><strong>You need to organize the code into cells so that each corresponds an one action of Design Pattern</strong> <a class="reference internal" href="main-components.html#dasfe"><span class="std std-ref">DASFE</span></a> <strong>of Marvin.</strong></p>
-<p><strong>Note that at the end of each cell there is a reserved variable named “marvin_”, it will be responsible for creating the artifacts. Also note that you need to import the libraries that will be used in each cell.</strong></p>
+<p><strong>You need to organize the code into cells so that each corresponds to one action of&nbsp; the Marvin-AI Design Pattern&nbsp;DASFE.</strong> <a class="reference internal" href="main-components.html#dasfe"><span class="std std-ref">DASFE</span></a></p>
+<p><strong>Note that at the end of each cell there is a reserved variable named “marvin_”, those variables will be responsible for creating the artifacts which will be persisted. Also note that you need to import the libraries that will be used in each corresponding cell.</strong></p>
 <p>First, you need to load the dataset. This cell it’s the <em>Acquisitor and Cleaner</em>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Data Acquisitor</span>
 <span class="kn">import</span> <span class="nn">marvin_iris_classification_engine</span>
@@ -246,7 +247,7 @@ $ marvin
 <span class="n">marvin_initial_dataset</span> <span class="o">=</span> <span class="n">iris</span>
 </pre></div>
 </div>
-<p>In the next cell occurs the dataset split, preparing for training. This cell it’s the <em>Training Preparator</em>.</p>
+<p>In the next cell we split the dataset to prepare for training. This cell it’s the&nbsp;<em>Training Preparator</em>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Training Preparator</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 
@@ -261,7 +262,7 @@ $ marvin
 <span class="n">marvin_dataset</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;train_X&#39;</span><span class="p">:</span> <span class="n">train_X</span><span class="p">,</span> <span class="s1">&#39;train_y&#39;</span><span class="p">:</span> <span class="n">train_y</span><span class="p">,</span> <span class="s1">&#39;test_X&#39;</span><span class="p">:</span> <span class="n">test_X</span><span class="p">,</span> <span class="s1">&#39;test_y&#39;</span><span class="p">:</span> <span class="n">test_y</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Next is the model training. In this tutorial was used the Support Vector Machine (SVM), but you can use the algorithm of your choice. This phase is the <em>Trainer</em>.</p>
+<p>Next is the model training. In this tutorial we used a Support Vector Machine (SVM), but you can use the algorithm of your choice. This phase is the&nbsp;<em>Trainer</em>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Model Traning</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
 
@@ -271,7 +272,7 @@ $ marvin
 <span class="n">marvin_model</span> <span class="o">=</span> <span class="n">model</span>
 </pre></div>
 </div>
-<p>The evaluation will now be performed by testing the model prediction. This is the <em>Metrics Evaluator</em>.</p>
+<p>Here we evaluate model performance utilizing prediction accuracy. This is the&nbsp;<em>Metrics Evaluator</em>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Model Evaluation</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
 
@@ -281,11 +282,11 @@ $ marvin
 <span class="n">marvin_metrics</span> <span class="o">=</span> <span class="n">metric</span>
 </pre></div>
 </div>
-<p>The following message does not enter the DASFE Architecture, it serves as Jupyter’s own tests. In this way, it will be in an isolated cell and will not receive any markup.</p>
+<p>The following message does not enter the DASFE Architecture, we use this for tests purposes while coding in the notebook.&nbsp; Therefore, it will be placed in an isolated cell and will not receive any markup.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">input_message</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;12&quot;</span><span class="p">,</span> <span class="s2">&quot;34&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">,</span> <span class="s2">&quot;23&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>This is where the transformation and reading of the message that will be passed to the predictor. Since the message is already prepared, <em>input_message</em> is not modified, receiving itself. This is the <em>Prediction Preparator</em>.</p>
+<p>In this cell occurs the reading and transformation of the message which will be further passed to the predictor. In this case, since there is no need to apply any treatment to the input message, the message is already prepared, thus we do not modify variable&nbsp;input_message. This is the&nbsp;<em>Prediction Preparator</em>.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Prediction Preparator</span>
 <span class="n">input_message</span> <span class="o">=</span> <span class="n">input_message</span>
 </pre></div>
@@ -295,42 +296,42 @@ $ marvin
 <span class="n">final_prediction</span> <span class="o">=</span> <span class="n">marvin_model</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">input_message</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Like on the test message, this cell doesn’t enter the DASFE Architecture. This cell is only for checking the result within Jupyter itself.</p>
+<p>Like on the test message, this cell does not enter the DASFE Architecture. This cell is only for checking the result within the notebook itself.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">final_prediction</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="mark-cells-on-dasfe-architecture">
 <h3>Mark cells on DASFE Architecture<a class="headerlink" href="#mark-cells-on-dasfe-architecture" title="Permalink to this headline">¶</a></h3>
-<p>To make the marks on cells, use a window at the top of the Jupyter code as the image below.</p>
+<p>To apply mark cells, use the drop-down menu at the top of the Jupyter notebook as illustrated below.</p>
 <img alt="../_images/dasfe-marvin.png" src="../_images/dasfe-marvin.png" />
-<p>Once the markup is done, the code should look like this</p>
+<p>Once the markup is done, the code should look like this:</p>
 <img alt="../_images/marked.png" src="../_images/marked.png" />
-<p>If everything is correct, save the changes and quit Jupyter.</p>
+<p>If everything is correct, save the changes and quit Jupyter Notebook.</p>
 </div>
 <div class="section" id="running-the-dryrun">
 <h3>Running the Dryrun<a class="headerlink" href="#running-the-dryrun" title="Permalink to this headline">¶</a></h3>
 <p>Marvin dryrun is a way to test your code against DASFE standards.</p>
-<p><strong>By default, a String message is sent to dryrun, but because the Iris Classifier message is a list of numbers, you must change it to be compatible. As Iris sends four characteristics, you must change the message to a four-number list.</strong></p>
-<p><strong>That way, access the engine.messages file inside the folder</strong> <span class="red">../marvin/iris-classification-engine/</span></p>
-<p>As explained, will find the file with the following <em>String</em> message:</p>
+<p><strong>By default, a String message is sent to dryrun, but because the Iris Classification message should be a list of four numbers (flower characteristics), you must change it to be compatible.</strong></p>
+<p><strong>In order to do this, access the engine.messages file inside the folder</strong> <span class="red">../marvin/iris-classification-engine/</span></p>
+<p>The default message should look like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
     <span class="s2">&quot;msg1&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello from marvin engine!&quot;</span>
 <span class="p">}]</span>
 </pre></div>
 </div>
-<p>So it’s necessary delete everything and put the following message:</p>
+<p>Delete the original content and input the following message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p>Now it’s possible perform the correct dryrun of the code. So at the terminal, type:</p>
+<p>Now it is possible to perform dryrun correctly. At the terminal, type the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin engine-dryrun
 </pre></div>
 </div>
 </div>
 <div class="section" id="http-server">
 <h3>Http Server<a class="headerlink" href="#http-server" title="Permalink to this headline">¶</a></h3>
-<p>With dryrun without errors, it’s possible generate the project API. Thus, the following command is used:</p>
+<p>After executing dryrun without any error raised, it’s possible to generate the project API. Use the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin engine-httpserver
 </pre></div>
 </div>

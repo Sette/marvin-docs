@@ -2,7 +2,7 @@
 Features
 ============================
 
-In this chapter we show and explain the features of Apache Marvin-AI.
+In this section, we show and explain the features of Apache Marvin-AI.
 
 Toolbox CLI
 --------------

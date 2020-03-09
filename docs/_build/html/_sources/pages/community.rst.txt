@@ -2,7 +2,7 @@
 Community
 ============================
 
-Here we will explain how contribute with Apache Marvin-AI Platform. 
+This section explains how to contribute with Apache Marvin-AI Platform. 
 
 GitHub
 --------------
