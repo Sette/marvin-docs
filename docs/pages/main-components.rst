@@ -4,7 +4,7 @@
 Main Components
 ============================
 
-Here we will explain the design pattern for Apache Marvin-AI.
+In this section, we explain the design pattern for Apache Marvin-AI.
 
 .. _dasfe:
 

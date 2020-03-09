@@ -2,7 +2,7 @@
 Working in an Existent Engine
 ================================
 
-In this chapter we have some examples of how work with an existing engine.
+In this section, there are some examples of how to work with an existing engine.
 
 1. If you don’t have an engine locally, clone one to your local machine
 

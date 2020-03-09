@@ -159,21 +159,22 @@
             
   <div class="section" id="working-in-an-existent-engine">
 <h1>Working in an Existent Engine<a class="headerlink" href="#working-in-an-existent-engine" title="Permalink to this headline">¶</a></h1>
-<p>In this chapter we have some examples of how work with an existing engine.</p>
+<p>In this section, there are some examples of how to work with an existing engine.</p>
 <ol class="arabic">
-<li><p>If you don’t have an engine locally, clone one to your local machine</p></li>
-<li><p>On Python Toolbox environment, set VirtualEnv and get to engine’s path:</p>
+<li><p class="first">If you don’t have an engine locally, clone one to your local machine</p>
+</li>
+<li><p class="first">On Python Toolbox environment, set VirtualEnv and get to engine’s path:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin engine-generateenv /path/to/engine/
 $ workon &lt;engine_name&gt;-env
 </pre></div>
 </div>
 </li>
-<li><p>Test your engine:</p>
+<li><p class="first">Test your engine:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin
 </pre></div>
 </div>
 </li>
-<li><p>Bring up the notebook and access it from your browser:</p>
+<li><p class="first">Bring up the notebook and access it from your browser:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ marvin notebook
 </pre></div>
 </div>
@@ -182,18 +183,18 @@ $ workon &lt;engine_name&gt;-env
 <div class="section" id="running-a-example-engine">
 <h2>Running a example engine<a class="headerlink" href="#running-a-example-engine" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p>Clone example engine from repository:</p>
+<li><p class="first">Clone example engine from repository:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/apache/incubator-marvin
 </pre></div>
 </div>
 </li>
-<li><p>Generate a new marvin engine environment for Iris species engine:</p>
+<li><p class="first">Generate a new marvin engine environment for Iris species engine:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ workon python-toolbox-env
 $ marvin engine-generateenv ../engines/iris-species-engine/
 </pre></div>
 </div>
 </li>
-<li><p>Run the Iris species engine:</p>
+<li><p class="first">Run the Iris species engine:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ workon iris-species-engine-env
 $ marvin engine-dryrun
 </pre></div>

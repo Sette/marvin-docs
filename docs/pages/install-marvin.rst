@@ -2,7 +2,9 @@
 Install Apache Marvin-AI
 ============================
 
-Welcome to Apache Marvin-Ai Install guide
+Welcome to Apache Marvin-AI install guide.
+
+**We strongly recommend the utilization of Python 3.6 or any latest version.**
 
 Ubuntu Install
 --------------
